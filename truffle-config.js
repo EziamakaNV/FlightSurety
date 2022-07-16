@@ -11,6 +11,11 @@ module.exports = {
       accounts: 50,
       defaultEtherBalance: 100
     },
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+    }
     // development: {
     //   provider: function() {
     //     return new HDWalletProvider(
@@ -25,7 +30,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-      version: "^0.8.14"
+      version: "0.8.14"
     }
   }
 };

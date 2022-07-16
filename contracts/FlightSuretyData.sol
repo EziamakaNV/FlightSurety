@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
-//pragma solidity >=0.4.22 <0.9.0;
-pragma solidity ^0.8.14;
+pragma solidity >=0.4.22 <0.9.0;
+//pragma solidity ^0.8.14;
 
 //import "../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "../node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol";
@@ -78,7 +78,6 @@ contract FlightSuretyData {
      *      The first airline is registered
      */
     constructor(string memory initialAirlineName, address initialAirlineAddress)
-        public
     {
         contractOwner = msg.sender;
 
@@ -87,6 +86,8 @@ contract FlightSuretyData {
             isFunded: false,
             isRegistered: true
         });
+
+        registeredAirlines.push(initialAirlineAddress);
     }
 
     /********************************************************************************************/
@@ -406,9 +407,8 @@ contract FlightSuretyData {
      * @dev Fallback function for funding smart contract.
      *
      */
-    fallback() external payable {
-        fund();
-    }
+    fallback() external payable {}
+    receive() external payable {}
 
     /**
    * @dev Funding an airline

@@ -25,7 +25,7 @@ var Config = async function(accounts) {
     let firstAirlineName = "Mage International Airlines";
 
     let flightSuretyData = await FlightSuretyData.new(firstAirlineName, firstAirlineAddress);
-    let flightSuretyApp = await FlightSuretyApp.new(FlightSuretyData.address);
+    let flightSuretyApp = await FlightSuretyApp.new(flightSuretyData.address);
 
     
     return {
