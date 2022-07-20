@@ -441,7 +441,6 @@ contract('Flight Surety Tests', async (accounts) => {
       let balanceAfterPay2 = await web3.eth.getBalance(passenger2);
       balanceAfterPay2 = await Number(web3.utils.fromWei(balanceAfterPay2, "ether"));
 
-      // Use .toFixed() to round up values, since test returns approximate values
       assert
         .equal((balanceAfterPay1 - balanceBeforePay1).toFixed(1), (amount1), "Cannot withdraw insurance from account");
       assert
