@@ -14,22 +14,29 @@ To install, download or clone the repo, then:
 ## Develop Client
 
 To run truffle tests:
+In the terminal run the command `truffle develop`
+![truffle-develop](images/development%20server%20with%20accounts.jpg)
 
-`truffle test ./test/flightSurety.js`
-`truffle test ./test/oracles.js`
+Then run the command `test`
+![truffle-test](images/tests.jpg)
+
 
 To use the dapp:
+Open a terminal and run `truffle develop` then enter the command `migrate --reset`
+![truffle-migrate](images/migrate.jpg)
 
-`truffle migrate`
-`npm run dapp`
+
+In another terminal run `npm run dapp:prod`
 
 To view dapp:
 
-`http://localhost:8000`
+Open the `index.html` file in the `prod/dapp` folder in a browser.
 
 ## Develop Server
 
 `npm run server`
+![node-server](images/server.jpg)
+
 `truffle test ./test/oracles.js`
 
 ## Deploy
@@ -50,3 +57,11 @@ Deploy the contents of the ./dapp folder
 * [Solidity Language Reference](http://solidity.readthedocs.io/en/v0.4.24/)
 * [Ethereum Blockchain Explorer](https://etherscan.io/)
 * [Web3Js Reference](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+
+## Versions
+
+* Truffle v5.5.12 (core: 5.5.12)
+* Ganache v^7.1.0
+* Solidity - 0.8.14 (solc-js)
+* Node v16.14.2
+* Web3.js v1.5.3
